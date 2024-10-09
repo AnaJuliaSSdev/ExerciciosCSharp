@@ -13,7 +13,7 @@ public class ContaBancaria
 
     public virtual void Sacar(decimal valorsSaque)
     {
-        if (valorsSaque - Saldo >= 0)
+        if (valorsSaque <= Saldo)
         {
             Saldo -= valorsSaque;
         }
@@ -37,6 +37,25 @@ public class ContaBancaria
     }
 }
 
+
+
+public class ContaPoupanca : ContaBancaria
+{
+    public int DiaRendimento { get; set; } = 0; 
+
+
+    public ContaPoupanca(string cliente, int num_conta, decimal saldo, int diaRendimento) : base(cliente, num_conta, saldo)
+    {
+        DiaRendimento = diaRendimento;
+    }
+
+    public void CalculaNovoSaldo(decimal taxaRendimento)
+    {
+        Saldo = Saldo + (Saldo * (taxaRendimento / 100));
+    }
+
+}
+
 public class ContaEspecial : ContaBancaria
 {
     public decimal Limite {  get; set; }
@@ -57,73 +76,4 @@ public class ContaEspecial : ContaBancaria
         }
     }
 }
-
-
-public class ContaPoupanca : ContaBancaria
-{
-    public int DiaRendimento { get; set; } = 0; 
-
-
-    public ContaPoupanca(string cliente, int num_conta, decimal saldo, int diaRendimento) : base(cliente, num_conta, saldo)
-    {
-        DiaRendimento = diaRendimento;
-    }
-
-    public void CalculaNovoSaldo(decimal taxaRendimento)
-    {
-        Saldo = Saldo + (Saldo * (taxaRendimento / 100));
-    }
-
-}
-
-
-
-
-
-//Na main:
-
-ContaPoupanca contaPoupanca = new ContaPoupanca("Ana", 1234, 1000.0M, 15);
-ContaEspecial contaEspecial = new ContaEspecial("Julia", 6789, 500.0M, 200M);
-
-Console.WriteLine("Dados da Conta Poupança:");
-contaPoupanca.MostrarDados();
-
-Console.WriteLine("\nDados da Conta Especial:");
-contaEspecial.MostrarDados();
-
-
-
-try
-{
-    Console.WriteLine("\nSaque na Conta Poupança:");
-    contaPoupanca.Sacar(200);
-} catch (Exception ex)
-{
-    Console.WriteLine(ex.Message);
-}
-
-try
-{
-    Console.WriteLine("\nSaque na Conta Especial:");
-    contaEspecial.Sacar(600);
-} catch (Exception ex)
-{
-    Console.WriteLine(ex.Message);
-}
-
-Console.WriteLine("Depósito na Conta Poupança:");
-contaPoupanca.Depositar(300m);
-
-
-Console.WriteLine("Depósito na Conta Especial:");
-contaEspecial.Depositar(200);
-
-Console.WriteLine("Calculando novo saldo da Conta Poupança após rendimento:");
-contaPoupanca.CalculaNovoSaldo(2.5M);
-
-Console.WriteLine("Dados atualizados da Conta Poupança:");
-contaPoupanca.MostrarDados();
-
-Console.WriteLine("Dados atualizados da Conta Especial:");
-contaEspecial.MostrarDados();
 

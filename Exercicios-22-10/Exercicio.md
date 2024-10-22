@@ -20,6 +20,5 @@ somados e qual a média. Refaça seu programa utilizando as seguintes regras:
 
 * Utilize os tratamentos de exceção para lidar com a entrada de dados.
 *  Quando a soma for superior a 100, o programa deverá gerar uma exceção
-criada pelo programador (veja transparência da aula pra ver como fazer),
-com nome ExcecaoAcimaDeCem.
+criada pelo programador, com nome ExcecaoAcimaDeCem.
 *  Lance essa exceção, com o uso de throws

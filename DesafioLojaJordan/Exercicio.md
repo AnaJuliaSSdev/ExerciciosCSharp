@@ -6,14 +6,22 @@
  
 > Importante: 
 > Busque seguir a estrutura HTML corretamente, 
-> respeitando as hierarquias e a semântica. 
+> respeitando as hierarquias e a semântica.
 
 ## Style Guide
 
+> Cores predominantes: 
+```
+HEX #7CA2F4
+HEX #121214 
+HEX #F3F7FF
+HEX #FFFFFF
+```
+
+> Fonte: [Archivo](https://fonts.google.com/specimen/Archivo)
+
+
 ![cores e fontes](styleGuideCoresEFontes.png)
-
-> Dica: [Tabela de cores em hexadecimal](https://celke.com.br/artigo/tabela-de-cores-html-nome-hexadecimal-rgb)
-
 
 ![pagina princial](styleGuideHome.png)
 
@@ -22,5 +30,11 @@
 
 
 
+# Links complementares
 
+
+- [Tabela de cores hexadecimal](https://celke.com.br/artigo/tabela-de-cores-html-nome-hexadecimal-rgb)
+- [Gradient color](https://cssgradient.io/)
+- [Doc firefox HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+- [Doc firefox CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 

@@ -9,7 +9,7 @@
 1. <strong> Exibir Saldo e Informações da Conta: </strong>
     * O sistema deve permitir que o cliente visualize o saldo da sua conta bancária, o número da conta e seu nome.
     * Apenas os dados necessários serão exibidos.
-    * A exibição ocorrerá por meio de uma interface simples. 
+    * A exibição ocorrerá por meio de uma interface simples. O usuário irá solicitar a exibição de seus dados ou transações e informar o número de sua conta para tal.
 
 2. <strong> Listagem de Transações: </strong>
     * O sistema deve exibir um histórico das últimas 10 transações da conta do cliente, incluindo a data, valor e tipo de   transação (exemplo: depósito, saque).   

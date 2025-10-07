@@ -1,1 +1,1 @@
-Exercícios que selecionei e ou adaptados para auxiliar no treinamento de novos funcionários.
+Exercícios que selecionei e ou adaptei para auxiliar no treinamento de novos funcionários.
